@@ -1,0 +1,30 @@
+<!--Author : Ayyappa B Vishwanath -->
+<!--Date: 21st July 2023-->
+<!-- Description: Simple Calculator which will input 2 numbers and will show the result based on button click-->
+<template>
+    <lightning-card title="Simple Calculator" icon-name="standard:formula">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input label="Enter Number" type="number" name="firstNumber" onchange={numberChangeHandler}> </lightning-input>
+            </lightning-layout-item>
+          
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input label="Enter Number" type="number" name="secondNumber" onchange={numberChangeHandler}> </lightning-input>
+            </lightning-layout-item>
+           
+            
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-button-group>
+                    <lightning-button label="Add" icon-name="utilitu:add"           icon-position="right"   onclick={addHandler}> </lightning-button>
+                    <lightning-button label="Subtract"  icon-name="utilitu:dash"    icon-position="right"    onclick={subtractHandler}> </lightning-button>
+                    <lightning-button label="Multiply" icon-name="utilitu:close"    icon-position="right"   onclick={multiplyHandler}> </lightning-button>
+                    <lightning-button label="Divide"  icon-name="utilitu:magicwand" icon-position="right"   onclick={divideHandler}> </lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" padding="around-medium">
+              <lightning-formatted-text value={result}> </lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
